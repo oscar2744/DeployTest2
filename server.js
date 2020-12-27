@@ -195,7 +195,7 @@ app.get('/', (req,res) => {
 	if (!req.session.authenticated) {    // user not logged in!
 		res.redirect('/login');
 	} else {
-		res.status(200).render('list',{});
+		res.status(200).render('list',{source:docs});
 	}
 });
 
